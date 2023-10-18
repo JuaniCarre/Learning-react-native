@@ -14,7 +14,6 @@ const Popularjobs = () => {
   const { data, isLoading, error } = useFetch('search', {query: 'React dev', num_pages:'1'})
 
 
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -28,15 +27,15 @@ const Popularjobs = () => {
           <ActivityIndicator size="large" colors={COLORS.primary}/>
         ): error? (
           <Text>error</Text>
-        ) : (<Text>Bueno fue</Text>
-          // <FlatList
-          //   data = {[1,2,3]}
-          //   renderItem={(item) => (<PopularJobCard item ={item}/>
-          //   )}
-          //   keyExtractor={item => item?.job_id}
-          //   contentContainerStyle={{columnGap: SIZES.medium}}
-          //   horizontal
-          // />
+        ) : (
+          <FlatList
+            data = {data}
+            renderItem={({item}) => (<PopularJobCard item ={item}/>
+            )}
+            keyExtractor={item => item?.job_id}
+            contentContainerStyle={{columnGap: SIZES.medium}}
+            horizontal
+          />
         )}
       </View>
     </View>
