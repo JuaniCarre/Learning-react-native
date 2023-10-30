@@ -16,7 +16,7 @@ const useFetch = ({endpoint, query}) => {
       num_pages: '1'
     },
     headers: {
-      'X-RapidAPI-Key': 'cd3f9bebc1msh7e8accecf406fc3p1fb39ajsn27f8a6ce950f',
+      'X-RapidAPI-Key': 'mentira colgala',
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     }
   };
